@@ -1,17 +1,19 @@
 use AdventureWorks2019;
 
 SELECT * FROM HumanResources.Employee
-
+-- Если хочешь видеть, кто именно (id + должность + пол/семейное положение)
 SELECT DISTINCT JobTitle
 FROM HumanResources.Employee
 WHERE MaritalStatus = 'S' 
 AND GENDER = 'M'
 
+SELECT DISTINCT JobTitle , Gender FROM HumanResources.Employee
 
--- Если хочешь видеть, кто именно (id + должность + пол/семейное положение)
+  
 
+-- Если хочешь видеть, кто именно (id + должность + пол/семейное положение):
 SELECT BusinessEntityID , JobTitle , MaritalStatus, Gender
 FROM HumanResources.Employee 
 WHERE MaritalStatus = 'S'
 AND Gender = 'M'
--- Если хочешь видеть, кто именно (id + должность + пол/семейное положение):
+
