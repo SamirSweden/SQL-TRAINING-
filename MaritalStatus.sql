@@ -17,3 +17,13 @@ FROM HumanResources.Employee
 WHERE MaritalStatus = 'S'
 AND Gender = 'M'
 
+
+
+SELECT BusinessEntityID , JobTitle , BirthDate,
+      FLOOR(DATEDIFF(DAY , BirthDate , GETDATE()) / 365.25) AS AgeApprox
+FROM HumanResources.Employee
+WHERE JobTitle LIKE '%SALES%'
+
+
+
+
