@@ -22,7 +22,7 @@ AND Gender = 'M'
 SELECT BusinessEntityID , JobTitle , BirthDate,
       FLOOR(DATEDIFF(DAY , BirthDate , GETDATE()) / 365.25) AS AgeApprox
 FROM HumanResources.Employee
-WHERE JobTitle LIKE '%SALES%' -- ВЫВЕСТИ СПИСОК С ДОЛЖНОСТЯМИ ГДЕ ЕСТЬ ПРЕФИКС SALES
+WHERE JobTitle LIKE '%SALES%' -- ВЫВЕСТИ СПИСОК С ДОЛЖНОСТЯМИ ГДЕ ЕСТЬ ПРЕФИКС SALES & вычислить возраст
 
 
 
