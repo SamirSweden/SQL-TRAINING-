@@ -34,5 +34,19 @@ ORDER BY ApproxHoliday DESC;
 
 
 
+SELECT 
+	p.FirstName,
+	p.LastName,
+	e.JobTitle
+FROM HumanResources.Employee e 
+JOIN Person.Person p on e.BusinessEntityID = p.BusinessEntityID
+JOIN HumanResources.EmployeeDepartmentHistory edh on e.BusinessEntityID = edh.BusinessEntityID 
+JOIN HumanResources.Department dp on edh.BusinessEntityID = dp.DepartmentID
+ORDER BY  p.FirstName , p.LastName 
+
+
+
+
+
 
 
