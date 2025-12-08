@@ -15,8 +15,15 @@ WHERE e.BirthDate = (
 	FROM HumanResources.Employee
 )
 
-
-
+-- самый страший соотрудник 
+SELECT TOP 1 
+	e.BusinessEntityID,
+	e.BirthDate,
+	p.FirstName,
+	p.LastName
+FROM HumanResources.Employee e 
+	INNER JOIN Person.Person p on e.BusinessEntityID = p.BusinessEntityID
+ORDER BY e.BirthDate DESC
 
 
 
