@@ -25,6 +25,14 @@ FROM HumanResources.Employee e
 	INNER JOIN Person.Person p on e.BusinessEntityID = p.BusinessEntityID
 ORDER BY e.BirthDate DESC
 
+-- Средние отпуска (Vacation Hours) по должностям
+SELECT JobTitle,
+	AVG(VacationHours) as ApproxHoliday	
+FROM HumanResources.Employee
+GROUP BY JobTitle
+ORDER BY ApproxHoliday DESC;
+
+
 
 
 
